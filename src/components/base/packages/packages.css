@@ -1,0 +1,93 @@
+
+
+.container-packages {
+    min-height: 560px;
+}
+
+.col-package {
+    min-height: 400px;
+    margin-left: 2em;
+    border: 1px solid #e5eaf2;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px hsl(0deg 0% 75% / 50%);
+    border-top: 0.4rem solid #00c8ff;
+    position: relative;
+    margin-top: 1em;
+}
+
+.package-label {
+    font-family: Roboto,sans-serif;
+    font-size: .875rem!important;
+    font-weight: 400;
+    color: #00377b!important;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.title-package {
+    font-family: Roboto,sans-serif;
+    font-size: 3rem!important;
+    font-weight: 700;
+    color: #00377b!important;
+    text-align: center;
+}
+
+.price-label {
+    font-family: Roboto,sans-serif;
+    font-size: 1.125rem!important;
+    font-weight: 400;
+    color: #00377b!important;
+    text-align: center;
+    line-height: 1.5px;
+    letter-spacing: 5px;
+}
+.task-label {
+    font-family: Roboto,sans-serif;
+    font-size: 0.6rem!important;
+    font-weight: 400;
+    color: #00377b!important;
+    text-align: center;
+ 
+}
+
+.description-packge {
+    font-family: Roboto,sans-serif;
+    text-align: left;
+    font-size: .875rem!important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #787878;
+}
+
+.btn-bottom {
+    position: absolute;
+    bottom: 0px;
+}
+
+.button-package {
+    color: #fff;
+    background-color: #00c8ff;
+    border-color: transparent;
+    cursor: pointer;
+
+    border-radius: 99rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    transition: .15s;
+
+}
+
+.btn-bottom a {
+    text-decoration: none;
+}

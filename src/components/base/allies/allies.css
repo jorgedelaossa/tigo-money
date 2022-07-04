@@ -1,0 +1,25 @@
+
+
+.allies-container {
+    min-height: 340px;
+}
+
+.allies {
+    height: auto;
+}
+
+.allie-col {
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #e5eaf2;
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 5%);
+}
+.allie-col:hover {
+    /* color: #00C8F4; */
+    border: 1px solid #00C8F4;
+}
+
+.link-image {
+    width: 100%;
+}

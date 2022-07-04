@@ -1,0 +1,28 @@
+
+
+.container-two-col-text-image {
+    min-height: 324px;
+    background-color: #fafafa;
+}
+
+.cols-container {
+    min-height: 324px;
+}
+
+.row-cols {
+    min-height: 250px;
+}
+
+.col-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.text-col  {
+    color: #565656;
+}
+
+.text-col a {
+    color: #00c8ff;
+}

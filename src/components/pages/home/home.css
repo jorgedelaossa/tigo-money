@@ -1,0 +1,86 @@
+
+
+
+.main-container {
+    height: 100px;
+    padding: 0;
+    background-color: #00377b;
+}
+
+.top-menu {
+    height: 30px;
+    background-color: #001950;
+}
+
+.services-container {
+    min-height: 500px;
+    padding: 2.5em;
+    background-color: #fafafa;
+}
+
+.tiles-container {
+    min-height: 400px;
+    padding: 1.5em;
+}
+
+.service-item {
+    position: relative;
+    min-height: 280px;
+    padding: 0;
+}
+
+.services-btn-container {
+    position: absolute;
+    bottom: 0px;
+    padding-bottom: 10px;
+}
+
+.services-btn-container a {
+    text-decoration: none;
+}
+
+.title-button {
+    color: #00377b!important;
+    font-size: 1.2rem!important;
+    text-align: center;
+    font-family: Roboto,sans-serif;
+    width: 70%;
+    line-height: 1.2em;
+}
+.service-button {
+    box-sizing: border-box;
+    color: rgb(0, 200, 255);
+    cursor: pointer;
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-weight: 700px;
+    height: auto;
+    line-height: 21px;
+    border: 1px solid rgb(0, 200, 255);
+    background-color:rgba(0, 0, 0, 0);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.service-button a {
+    text-decoration: none;
+    color: rgb(0, 200, 255);
+}
+
+.faqs-container {
+    min-height: 300px;
+    background-color: #fafafa;
+    padding-bottom: 1em;
+}
+
+.faqs-div a {
+
+    color: #565656;
+}
+
+

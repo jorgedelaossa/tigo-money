@@ -1,0 +1,46 @@
+
+
+.carousel-container {
+    height: 528px;
+    
+    /* background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; */
+    /* background-size: 100% auto; */
+}
+
+
+.main-carousel {
+    min-height: 528px;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* position: relative; */
+    
+}
+
+
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-bbreus-MuiButtonBase-root-MuiIconButton-root{
+    z-index: 99999;
+    /* color: #00377b; */
+    margin-top: -3.5em;
+}
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-8ucetn-MuiButtonBase-root-MuiIconButton-root {
+    z-index: 99999;
+    color: #fafafa;
+     margin-top: -3.5em; 
+}
+
+
+
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-1g04gm2-MuiButtonBase-root-MuiIconButton-root {
+    background-color: transparent;
+    /* opacity: 0.1; */
+}
+
+.link-carousel {
+    
+}

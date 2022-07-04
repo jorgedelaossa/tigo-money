@@ -1,0 +1,29 @@
+
+
+.container-two-col-text-video {
+    min-height: 324px;
+    /* background-color: #fafafa; */
+    background-color: #fff;
+}
+
+.cols-container {
+    min-height: 324px;
+}
+
+.row-cols-video {
+    height: auto;
+}
+
+.col-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.text-col  {
+    color: #565656;
+}
+
+.text-col a {
+    color: #00c8ff;
+}

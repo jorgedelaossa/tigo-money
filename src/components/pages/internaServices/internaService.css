@@ -1,0 +1,26 @@
+
+.main-container {
+    height: 100px;
+    padding: 0;
+    background-color: #00377b;
+}
+
+.top-menu {
+    height: 30px;
+    background-color: #001950;
+}
+
+.masthead-container {
+    min-height: 528px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-size: 100% auto; */
+}
+
+.container-h1 {
+    text-align: center;
+    color: #787878;
+    height: auto;
+    padding-bottom: 2em;
+}
