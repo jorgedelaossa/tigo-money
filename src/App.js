@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
@@ -136,33 +137,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <a href={page.logoCollection.items[0].description} target="_blank" rel="noreferrer">
-        <img src={page.logoCollection.items[0].url} className="App-logo" alt="logo" />
-        </a> */}
-        <p>
-          {/* Edit <code>src/App.js</code> and save to reload1. */}
-          {/* {page.title} */}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <div className="container">
-        hello
-        <div className="row">
-          <div className="col-6" style={{border: '1px solid #FFF', height: '1em'}}>hello</div>
-          <div className="col-6" style={{border: '1px solid #FFF', height: '1em'}}>my friend</div>
+          <h1>Tigo Money </h1>
+            <ul>
+              <li><Link to="/elsalvador/home">El salvador</Link></li> 
+              <li><Link to="/honduras/home">Honduras</Link></li> 
+              
+            </ul>
         </div>
-        <div>
-          container <br />
-          {/* {documentToReactComponents(richTextDocument, options)} */}
-          {documentToReactComponents(page.hero.text.json, options)}
-        </div>
-      </div>
       </header>
     </div>
   );
