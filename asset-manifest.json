@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tigo-money/static/css/main.cd8636b2.css",
-    "main.js": "/tigo-money/static/js/main.db6f2b53.js",
-    "static/js/787.759a6f5c.chunk.js": "/tigo-money/static/js/787.759a6f5c.chunk.js",
-    "static/media/logo.svg": "/tigo-money/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/tigo-money/index.html",
-    "main.cd8636b2.css.map": "/tigo-money/static/css/main.cd8636b2.css.map",
-    "main.db6f2b53.js.map": "/tigo-money/static/js/main.db6f2b53.js.map",
-    "787.759a6f5c.chunk.js.map": "/tigo-money/static/js/787.759a6f5c.chunk.js.map"
+    "main.css": "/static/css/main.cd8636b2.css",
+    "main.js": "/static/js/main.ec23203b.js",
+    "static/js/787.759a6f5c.chunk.js": "/static/js/787.759a6f5c.chunk.js",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.cd8636b2.css.map": "/static/css/main.cd8636b2.css.map",
+    "main.ec23203b.js.map": "/static/js/main.ec23203b.js.map",
+    "787.759a6f5c.chunk.js.map": "/static/js/787.759a6f5c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd8636b2.css",
-    "static/js/main.db6f2b53.js"
+    "static/js/main.ec23203b.js"
   ]
 }
