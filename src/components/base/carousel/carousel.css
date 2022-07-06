@@ -23,13 +23,13 @@
 
 
 .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-bbreus-MuiButtonBase-root-MuiIconButton-root{
-    z-index: 99999;
+    z-index: 9;
     /* color: #00377b; */
     margin-top: -3.5em;
 }
 
 .MuiButtonBase-root.MuiIconButton-root.MuiIconButton-sizeMedium.css-8ucetn-MuiButtonBase-root-MuiIconButton-root {
-    z-index: 99999;
+    z-index: 9;
     color: #fafafa;
      margin-top: -3.5em; 
 }

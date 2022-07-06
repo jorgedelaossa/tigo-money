@@ -11,10 +11,16 @@
 .masthead-image {
     width: auto;
     height: 60px;
+    
 }
 
 .items-container {
     padding-left: 2em;
+    
+}
+
+.media-query-flag {
+    display: block;
 }
 
 .menu-item {
@@ -43,4 +49,35 @@
     text-decoration: none;
     color: #fff;
     color: #00c8ff;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+.list-item-cont a {
+    text-decoration: none;
+    color: #666;
+}
+.mobile-item {
+    color: #666;
+}
+
+.mobile-item-active {
+    color: #00377D;
+}
+
+@media only screen and (max-width: 768px) {
+    .media-query-flag {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+        margin-left: 1em;
+    }
+
+    .masthead-image {
+        margin-left: 1em;
+    }
 }

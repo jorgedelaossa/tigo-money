@@ -114,9 +114,9 @@ function App() {
   }, []);
 
   // show a loading screen case the data hasn't arrived yet
-  if (!page) {
-    return "Loading...";
-  }
+  // if (!page) {
+  //   return "Loading...";
+  // }
 
 
   const Bold = ({ children }) => <span className="bold">{children}</span>;
@@ -138,11 +138,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="container">
-          <h1>Tigo Money </h1>
+          <span style={{color: "#fff"}}>Tigo Money Page</span>
+          <br /><br />
             <ul>
               <li><Link to="/elsalvador/home">El salvador</Link></li> 
               <li><Link to="/honduras/home">Honduras</Link></li> 
-              
+              <li><Link to="/bo/home">Bolivia</Link></li> 
             </ul>
         </div>
       </header>

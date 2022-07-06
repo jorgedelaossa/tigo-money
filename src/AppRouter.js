@@ -19,11 +19,15 @@ const AppRouter = () => {
       <Routes>
         <Route exact path="/" element={<App/>} />
         <Route exact path="/honduras/home" element={<Home/>} />
+        <Route exact path="/guatemala/home" element={<Home/>} />
         <Route exact path="/honduras/interna-servicios" element={<InternaService/>} />
         <Route exact path="/honduras/interna-informacion" element={<InternaInformation/>} />
         <Route exact path="/honduras/interna-paquetes" element={<InternaPackages/>} />
         <Route exact path="/elsalvador/home" element={<Home/>} />
         <Route exact path="/elsalvador/interna-servicios" element={<InternaService/>} />
+        
+        <Route exact path="/bo/home" element={<Home/>} />
+        <Route exact path="/bo/enviar-recibir-dinero" element={<InternaInformation/>} />
       </Routes>
     </Router>
   )
