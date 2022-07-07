@@ -8,7 +8,6 @@ import Cta from "../../base/cta/cta";
 import TwoColumns from "../../base/twoColumns/twoColumns";
 import Footer from "../../base/footer/footer";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { Link, useLocation } from "react-router-dom";
 
 const query = `
@@ -66,18 +65,6 @@ const Home = () => {
 
   const [page, setPage] = React.useState(null);
   const location = useLocation();
-
-  const Bold = ({ children }) => <span className="bold">{children}</span>;
-  const Text = ({ children }) => <p className="align-center">{children}</p>;
-
-  const options = {
-    renderMark: {
-      [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-    },
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-    },
-  };
 
   useEffect(() => {
     // console.log(location.pathname);
@@ -183,7 +170,7 @@ const Home = () => {
       <section>
         <div className="container-fluid faqs-container  pt-4">
             <div className="container faqs-div mt-4 pt-2">
-              {documentToReactComponents(page.faqs.json, options)}
+              {documentToReactComponents(page.faqs.json)}
             </div>
         </div>
       </section>
