@@ -12,9 +12,10 @@ function App() {
           <span style={{color: "#fff"}}>Tigo Money Page</span>
           <br /><br />
             <ul>
-              <li><Link to="/elsalvador/home">El salvador</Link></li> 
               <li><Link to="/honduras/home">Honduras</Link></li> 
-              <li><Link to="/bo/home">Bolivia</Link></li> 
+              <li><Link to="/bo/home">Bolivia</Link></li>
+              <li><Link to="/sv/home">El salvador</Link></li> 
+              <li><Link to="/gt/home">Guatemala</Link></li>
             </ul>
         </div>
       </header>
