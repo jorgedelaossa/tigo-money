@@ -26,8 +26,20 @@ const AppRouter = () => {
         <Route exact path="/elsalvador/home" element={<Home/>} />
         <Route exact path="/elsalvador/interna-servicios" element={<InternaService/>} />
         
+        {/* nuevos routes    */}
+
+        {/* Honduras */}
+        {/* <Route exact path="/hn/home" element={<Home/>} />
+        <Route exact path="/hn/enviar-recibir-dinero" element={<InternaInformation/>} /> */}
+        {/* Bolivia */}
         <Route exact path="/bo/home" element={<Home/>} />
         <Route exact path="/bo/enviar-recibir-dinero" element={<InternaInformation/>} />
+        {/* El Salvador */}
+        <Route exact path="/sv/home" element={<Home/>} />
+        <Route exact path="/sv/pago-servicios" element={<InternaService/>} />
+        {/* Guatemala */}
+        <Route exact path="/gt/home" element={<Home/>} />
+        <Route exact path="/gt/pagar-servicios" element={<InternaService/>} />
       </Routes>
     </Router>
   )
