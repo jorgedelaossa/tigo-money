@@ -81,7 +81,7 @@ const InternaInformation = () => {
     // console.log(location.pathname);
 
     const url = String(location.pathname).split("/");
-    const slug = url[1];
+    const slug = url[2];
     console.log("slug", slug);
 
     window
@@ -142,10 +142,13 @@ const InternaInformation = () => {
 
       <section>
         <a href={page?.mainImageCta} target="_blank" rel="noreferrer">
-          <div
+          {/* <div
             className="masthead-container "
             style={{ backgroundImage: `url(${page?.mainImage.url})` }}
-          ></div>
+          ></div> */}
+          <div className="masthead-container d-flex aling-items-center justify-content-center">
+            <img className="img-masthead" src={page?.mainImage.url} alt={page?.mainImage.title}/>
+          </div>
         </a>
       </section>
       <section>

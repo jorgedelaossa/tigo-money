@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
-import "./home.css";
+import "./internaInformation2.css";
 import { Helmet } from "react-helmet";
 import Loading from "../../base/loading/loading";
 import Header from "../../base/header/header";
-import Carousel from "../../base/carousel/carousel"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useLocation } from "react-router-dom";
+import TwoColumnsTextImage from "../../base/twoColumsTextImage/twoColumnsTextImage";
+import TwoColumnsLeftTextImage from "../../base/twoColumsLeftTextImage/twoColumnsLeftTextImage";
+// import TwoColumnsTextVideo from "../../base/twoColumsTextVideo/twoColumnsTextVideo";
 import Cta from "../../base/cta/cta";
-import TwoColumns from "../../base/twoColumns/twoColumns";
 import Footer from "../../base/footer/footer";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { Link, useLocation } from "react-router-dom";
 
 const query = `
 {
-    homePageCollection{
+  internaInformacion2Collection{
       items{
+        internalName
         pageTitle
         slug
         seoMetadata{
@@ -29,26 +31,38 @@ const query = `
           }
           menuItems
         }
-        carouselCollection{
-          items{
-            title
-            description
+        mainImage{
+          url
+        }
+        mainImageCta
+        headerOne{
+          json
+        }
+        twoColumnsTextImage{
+          rightText {
+            json
+          }
+          image {
             url
           }
         }
-        headerOne
-        servicesTiles
-        cta {
-          icon{
+        cta{
+          icon {
             url
           }
           text
           labelButton
           ctaButton
         }
-        headerTwo
-        twoColumns
-        faqs {
+        twoColumnsTextLeftImage{
+          image{
+            url
+          }
+          leftText{
+            json
+          }
+        }
+        faqs{
           json
         }
         footer{
@@ -58,11 +72,9 @@ const query = `
       }
     }
   }
+
 `;
-
-const Home = () => {
-  console.log("hellow from here");
-
+const InternaInformation2 = () => {
   const [page, setPage] = React.useState(null);
   const location = useLocation();
 
@@ -93,9 +105,13 @@ const Home = () => {
         // rerender the entire component with new data
         console.log("data", data);
 
-        data.homePageCollection.items.forEach((element, index) => {
+        data.internaInformacion2Collection.items.forEach((element, index) => {
           if (element.slug === slug) {
-            setPage(data.homePageCollection.items[index]);
+            console.log(
+              " current data",
+              data.internaInformacion2Collection.items[index]
+            );
+            setPage(data.internaInformacion2Collection.items[index]);
           }
         });
 
@@ -123,49 +139,48 @@ const Home = () => {
         />
         <link rel="canonical" href={page.canonicalHref} />
       </Helmet>
-      <Header logo={page.nav.logo} menuItems={page.nav.menuItems.menu} />
-      {/* <section
-        className="carousel-container "
-        style={{ backgroundImage: `url(${page.carousel.url})` }}
-      ></section> */}
+      <Header logo={page?.nav.logo} menuItems={page?.nav.menuItems.menu} />
+
       <section>
-        <Carousel data={page.carouselCollection}/>
+        <a href={page?.mainImageCta} target="_blank" rel="noreferrer">
+          {/* <div
+            className="masthead-container "
+            style={{ backgroundImage: `url(${page?.mainImage.url})` }}
+          ></div> */}
+          <div className="masthead-container d-flex aling-items-center justify-content-center">
+            <img className="img-masthead" src={page?.mainImage.url} alt={page?.mainImage.title}/>
+          </div>
+        </a>
+      </section>
+      <section>
+        <div className="container container-h1 mt-4 pt-4  ">
+          {documentToReactComponents(page.headerOne.json)}
+        </div>
       </section>
 
-      <section className="services-container ">
-        <h1>{page.headerOne}</h1>
-        <div className="container  tiles-container d-flex align-items-center justify-content-center ">
-          <div className="row  ">
-            {page.servicesTiles.items.map((service, index) => {
-              return (
-                <div key={index} className="col service-item ">
-                  <div className="d-flex justify-content-center">
-                    <img src={service.icon_url} alt={service.title} />
-                  </div>
-                  <div className="w-100 pt-3  d-flex justify-content-center title-service-container">
-                    <div className="title-button">{service.title}</div>
-                  </div>
-                  <div className=" col-12  services-btn-container d-flex justify-content-center">
-                    <a href={service.button_url} target="_blank" rel="noreferrer">
-                    <button className="service-button">
-                      {/* <Link to={service.button_url} target="_blank"> */}
-                        {service.button_label}
-                      {/* </Link> */}
-                    </button>
-                    </a>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <Cta data={page.cta} />
-        <br /><br /><br />
+      <section>
+        <TwoColumnsTextImage data={page.twoColumnsTextImage} />
       </section>
+
       
-      <section className="mt-4">
-        <TwoColumns data={page.twoColumns}/>
+      
+
+  
+      {/* <section>
+        <TwoColumnsTextVideo data={page.twoColumnsTextVideo} />
+      </section> */}
+
+      <section>
+        <div className="mt-4 pt-4 pb-4">
+          <Cta data={page.cta} />
+        </div>
+        <br />
       </section>
+
+      <section>
+        <TwoColumnsLeftTextImage data={page.twoColumnsTextLeftImage} />
+      </section>
+
 
       <section>
         <div className="container-fluid faqs-container  pt-4">
@@ -176,8 +191,8 @@ const Home = () => {
       </section>
       
       <Footer data={page.footer}/>
-      
     </div>
   );
 };
-export default Home;
+
+export default InternaInformation2;

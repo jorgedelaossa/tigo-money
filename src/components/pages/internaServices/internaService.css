@@ -11,12 +11,19 @@
 }
 
 .masthead-container {
-    min-height: 528px;
-    background-size: cover;
+    /* min-height: 528px; */
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center center; */
     /* background-size: 100% auto; */
+    height: auto;
 }
+
+.img-masthead {
+    width: 100%;
+    height: auto;
+}
+
 
 .container-h1 {
     text-align: center;

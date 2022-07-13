@@ -11,11 +11,12 @@
 
 
 .main-carousel {
-    min-height: 528px;
-    
+    min-height: 520px;
+    /* background-color: #00377b; */
+    /* background-size: 100% auto; */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     /* position: relative; */
     
 }

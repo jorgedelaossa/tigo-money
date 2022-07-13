@@ -39,7 +39,7 @@ const Header = (props) => {
     const url = String(location.pathname).split("/")
     const slug = "/"+url[1]+"/"+url[2];
     setSlug(slug)
-    console.log('slug', slug)
+    console.log('slug header', slug)
   },[])
 
 
@@ -101,7 +101,10 @@ const Header = (props) => {
             {props.menuItems?.map((item, index) => {
               return (
                 <div key={index} className={slug === item.url ? "menu-item-active" : "menu-item"}>
-                  <Link to={item.url}>{item.label}</Link>
+                  {/* <Link to={item.url}>{item.label}</Link> */}
+                  <a href={item.url}>
+                    <span>{item.label}</span>
+                  </a>
                 </div>
               );
             })}

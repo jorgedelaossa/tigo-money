@@ -13,8 +13,8 @@
     min-height: 250px;
 }
 
-.col-img-two-col {
-    background-size: 100% auto;
+.col-img {
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }

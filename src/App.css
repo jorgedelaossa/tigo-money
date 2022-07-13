@@ -1,8 +1,47 @@
 .App {
-  text-align: center;
+ background-color: #FABE00;
+ height: 100vh;
 }
 
-.App-logo {
+.home-container {
+  min-height: 40vh;
+}
+
+.img-flag {
+  width: 30px;
+  height: auto;
+  
+}
+
+.img-logo {
+  width: 350px;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.label-country {
+  margin-left: 0.5em;
+}
+
+.country-li {
+  padding-top: 1em;
+}
+
+.country-li a {
+  text-decoration: none;
+
+    color: #00377D;
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +74,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
