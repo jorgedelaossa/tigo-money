@@ -53,14 +53,14 @@ const Header = (props) => {
       <List>
         {props.menuItems?.map((item, index) => (
           <ListItem  className="list-item-cont" key={index} disablePadding>
-             <Link to={item.url}>
+             <a href={item.url}>
             <ListItemButton >
               {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon> */}
               <ListItemText  className={slug === item.url ? "mobile-item-active" : "mobile-item"}  primary={item.label} />
             </ListItemButton>
-            </Link>
+            </a>
           </ListItem>
         ))}
       </List>

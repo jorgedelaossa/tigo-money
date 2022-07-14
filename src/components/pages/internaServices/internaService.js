@@ -118,7 +118,7 @@ const InternaService = () => {
 
         // setPage(data.homePageCollection.items[0]);
       });
-  }, []);
+  }, [location.key]);
 
   // show a loading screen case the data hasn't arrived yet
   if (!page) {
