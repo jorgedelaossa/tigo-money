@@ -40,7 +40,7 @@ const Header = (props) => {
     const slug = "/"+url[1]+"/"+url[2];
     setSlug(slug)
     console.log('slug header', slug)
-  },[])
+  },[location.key])
 
 
   const list = () => (
@@ -53,14 +53,14 @@ const Header = (props) => {
       <List>
         {props.menuItems?.map((item, index) => (
           <ListItem  className="list-item-cont" key={index} disablePadding>
-             <a href={item.url}>
+             <Link to={item.url}>
             <ListItemButton >
               {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon> */}
               <ListItemText  className={slug === item.url ? "mobile-item-active" : "mobile-item"}  primary={item.label} />
             </ListItemButton>
-            </a>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -101,10 +101,10 @@ const Header = (props) => {
             {props.menuItems?.map((item, index) => {
               return (
                 <div key={index} className={slug === item.url ? "menu-item-active" : "menu-item"}>
-                  {/* <Link to={item.url}>{item.label}</Link> */}
-                  <a href={item.url}>
+                  <Link to={item.url}>{item.label}</Link>
+                  {/* <a href={item.url}>
                     <span>{item.label}</span>
-                  </a>
+                  </a> */}
                 </div>
               );
             })}
