@@ -82,7 +82,7 @@ const Header = (props) => {
 
   return (
     <div className="container ">
-      <div className="row masthead">
+      <div className="row masthead ">
         <div className="col-10 col-md-2 no-padding d-flex align-items-center">
           <div className="hamburger-btn">
             <MenuIcon onClick={toggleDrawer('left', true)} color="primary"  />

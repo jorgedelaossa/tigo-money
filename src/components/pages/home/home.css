@@ -83,4 +83,22 @@
     color: #565656;
 }
 
+.tyc-container {
+    background-color: #00377b;
+    height: auto;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-stretch: 100%;
+    font-style: normal;
+    font-weight: 700px;
+    color: #fafafa;
+}
+
+.tyc-container a {
+    text-decoration: none;
+    color: #fafafa;
+    margin-top: -2em;
+}
+
 

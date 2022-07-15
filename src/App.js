@@ -22,12 +22,6 @@ function App() {
             <div className="col-md-6 p-4 d-flex align-items-center">
               <ul className="">
                 <li className="country-li">
-                  <Link to="/hn/home-hn">
-                    <img className="img-flag" src={hnFlag} alt="hn-flag" />
-                     <span className="label-country">Honduras </span>
-                  </Link>
-                </li> 
-                <li className="country-li">
                   <Link to="/bo/home-bo">
                     <img className="img-flag" src={boFlag} alt="hn-flag" />
                     <span className="label-country">Bolivia</span>
@@ -45,6 +39,12 @@ function App() {
                     <span className="label-country">Guatemala </span>
                   </Link>
                 </li>
+                <li className="country-li">
+                  <Link to="/hn/home-hn">
+                    <img className="img-flag" src={hnFlag} alt="hn-flag" />
+                     <span className="label-country">Honduras </span>
+                  </Link>
+                </li> 
                 <li className="country-li">
                   <Link to="/py/home-py">
                     <img className="img-flag" src={pyFlag} alt="sv-flag" />

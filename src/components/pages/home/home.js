@@ -51,6 +51,12 @@ const query = `
         faqs {
           json
         }
+        legals {
+          title
+          textContent {
+            json
+          }
+        }
         footer{
           text
           socialMedia
@@ -65,6 +71,7 @@ const Home = () => {
 
   const [page, setPage] = React.useState(null);
   const location = useLocation();
+  const [slug, setSlug] = React.useState(null);
 
   useEffect(() => {
     // console.log(location.pathname);
@@ -72,6 +79,7 @@ const Home = () => {
     const url = String(location.pathname).split("/");
     const slug = url[2];
     console.log("slug", slug);
+    setSlug(slug)
 
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/5btn2y9mgkqy/`, {
@@ -175,7 +183,12 @@ const Home = () => {
         </div>
       </section>
       
-      <Footer data={page.footer}/>
+      <Footer  data={page.footer}/>
+      <div className=" p-1 container-fluid  tyc-container d-flex justify-content-center">
+          <Link to={"/legales?id=homePageCollection&slug="+slug}>
+            Términos y Condiciones
+          </Link>
+      </div>
       
     </div>
   );

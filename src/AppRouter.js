@@ -10,6 +10,7 @@ import InternaService from './components/pages/internaServices/internaService'
 import InternaInformation from './components/pages/internaInformation/internaInformation'
 import InternaInformation2 from './components/pages/internaInformation2/internaInformation2'
 import InternaPackages from './components/pages/internaPackages/internaPackages'
+import Legals from './components/base/legals/legals'
 
 
 
@@ -63,6 +64,10 @@ const AppRouter = () => {
         <Route exact path="/py/enviar-recibir-dinero-py" element={<InternaService/>} />
         <Route exact path="/py/pagar-comercios-py" element={<InternaService/>} />
         <Route exact path="/py/recargas-py" element={<InternaInformation2/>} />
+
+        <Route exact path="/legales" element={<Legals/>} />
+
+
         
 
 
