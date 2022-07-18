@@ -1,7 +1,7 @@
 
 .footer-container {
     min-height: 90px;
-    background-color: #00377b;
+    background-color: #FABE00;
 }
 
 .col-footer {
@@ -12,11 +12,12 @@
     width: 20px;
     height: 20px;
     margin-left: -10px;
+    filter: invert(100%);
 }
 
 .footer-text {
     box-sizing: border-box;
-    color: rgb(255, 255, 255);
+    color: #00377D;
     display: block;
     font-family: Roboto, sans-serif;
     font-size: 12px;

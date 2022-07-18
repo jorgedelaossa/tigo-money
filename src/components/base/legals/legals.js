@@ -5,7 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Loading from "../../base/loading/loading";
-
+import Footer from '../../base/footer/footer'
 
 
 let query = `
@@ -101,6 +101,7 @@ const Legals = (props) => {
               <div className="p2 pt-4 container tyc">
                 { documentToReactComponents(page.legals.textContent.json)}
               </div>
+              <Footer />
             </div>          
     )
 }

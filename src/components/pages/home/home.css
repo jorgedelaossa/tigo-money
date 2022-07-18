@@ -84,7 +84,7 @@
 }
 
 .tyc-container {
-    background-color: #00377b;
+    background-color: #FABE00;
     height: auto;
     text-align: center;
     font-family: Roboto, sans-serif;
@@ -97,8 +97,8 @@
 
 .tyc-container a {
     text-decoration: none;
-    color: #fafafa;
-    margin-top: -2em;
+    color: #00377D;
+    margin-top: -2.5em;
 }
 
 
