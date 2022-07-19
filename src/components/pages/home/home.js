@@ -128,9 +128,12 @@ const Home = () => {
         <meta name="keywords" content={page.seoMetadata.keywords}></meta>
         <link
           rel="alternate"
-          hreflang={page.seoMetadata.hreflang}
+          hrefLang={page.seoMetadata.hreflang}
           href={page.seoMetadata.href}
+          key={page.seoMetadata.hreflang}
         />
+        <link rel="alternate" href="https://qa.tigomoney.com" hreflang="x-default" />
+
         <link rel="canonical" href={page.canonicalHref} />
       </Helmet>
       <Header logo={page.nav.logo} menuItems={page.nav.menuItems.menu} />

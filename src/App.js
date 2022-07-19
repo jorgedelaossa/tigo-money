@@ -20,7 +20,7 @@ function App() {
                 <img src={logo} className="img-logo" alt="tigo home logo"/>
             </div>
             <div className="col-md-6 p-4 d-flex align-items-center">
-              <ul className="">
+              <ul className="ul-home">
                 <li className="country-li">
                   <Link to="/bo/home-bo">
                     <img className="img-flag" src={boFlag} alt="hn-flag" />
