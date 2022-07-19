@@ -78,14 +78,16 @@ const query = `
 const InternaService = () => {
   const [page, setPage] = React.useState(null);
   const location = useLocation();
+  const [keyCountry, setKeyCountry] = React.useState(null);
 
   useEffect(() => {
     // console.log(location.pathname);
 
     const url = String(location.pathname).split("/");
     const slug = url[2];
+    setKeyCountry(url[1]);
     console.log("slug", slug);
-
+    
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/5btn2y9mgkqy/`, {
         method: "POST",
@@ -112,7 +114,9 @@ const InternaService = () => {
               " current data",
               data.internaServiciosCollection.items[index]
             );
-            setPage(data.internaServiciosCollection.items[index]);
+            setTimeout(function(){
+              setPage(data.internaServiciosCollection.items[index]);
+            }, 500);
           }
         });
 
@@ -122,9 +126,9 @@ const InternaService = () => {
 
   // show a loading screen case the data hasn't arrived yet
   if (!page) {
-    if (!page) {
-      return(<Loading />)
-    }
+      
+    return(<Loading />)
+    
   }
 
   return (
@@ -182,6 +186,11 @@ const InternaService = () => {
       </section>
       
       <Footer data={page.footer}/>
+      <div className=" p-1 container-fluid  tyc-container d-flex justify-content-center">
+          <Link to={"/legales?id=homePageCollection&slug=home-"+keyCountry}>
+            Términos y Condiciones
+          </Link>
+      </div>
     </div>
   );
 };

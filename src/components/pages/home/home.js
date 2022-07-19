@@ -103,7 +103,9 @@ const Home = () => {
 
         data.homePageCollection.items.forEach((element, index) => {
           if (element.slug === slug) {
+            setTimeout(function(){
             setPage(data.homePageCollection.items[index]);
+            },500)
           }
         });
 

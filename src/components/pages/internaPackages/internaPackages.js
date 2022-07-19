@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import Loading from "../../base/loading/loading";
 import Header from "../../base/header/header";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Cta from "../../base/cta/cta";
 import Footer from "../../base/footer/footer";
 import Packages from "../../base/packages/packages";
@@ -61,6 +61,7 @@ const query = `
 const InternaPackages = () => {
   const [page, setPage] = React.useState(null);
   const location = useLocation();
+  const [keyCountry, setKeyCountry] = React.useState(null);
 
   useEffect(() => {
     // console.log(location.pathname);
@@ -68,7 +69,7 @@ const InternaPackages = () => {
     const url = String(location.pathname).split("/");
     const slug = url[2];
     console.log("slug", slug);
-
+    setKeyCountry(url[1])
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/5btn2y9mgkqy/`, {
         method: "POST",
@@ -95,7 +96,9 @@ const InternaPackages = () => {
               " current data",
               data.internaPaquetesCollection.items[index]
             );
-            setPage(data.internaPaquetesCollection.items[index]);
+            setTimeout(function() {
+             setPage(data.internaPaquetesCollection.items[index]);
+            }, 500)
           }
         });
 
@@ -160,6 +163,11 @@ const InternaPackages = () => {
       </section>
 
       <Footer data={page.footer} />
+      <div className=" p-1 container-fluid  tyc-container d-flex justify-content-center">
+          <Link to={"/legales?id=homePageCollection&slug=home-"+keyCountry}>
+            Términos y Condiciones
+          </Link>
+      </div>
     </div>
   );
 };

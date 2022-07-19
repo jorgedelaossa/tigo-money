@@ -33,6 +33,10 @@ let query = `
             json
           }
         }
+        footer{
+          text
+          socialMedia
+        }
       }
     }
   }
@@ -98,10 +102,12 @@ const Legals = (props) => {
                 <meta name="description" content="Legales tigo"></meta>
               </Helmet>
               <Header logo={page.nav.logo} menuItems={page.nav.menuItems.menu} />
+              
               <div className="p2 pt-4 container tyc">
+                <h1>{page.legals.title}</h1> <br />
                 { documentToReactComponents(page.legals.textContent.json)}
               </div>
-              <Footer />
+              <Footer data={page.footer}/>
             </div>          
     )
 }

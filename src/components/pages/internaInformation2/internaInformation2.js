@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import Loading from "../../base/loading/loading";
 import Header from "../../base/header/header";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import TwoColumnsTextImage from "../../base/twoColumsTextImage/twoColumnsTextImage";
 import TwoColumnsLeftTextImage from "../../base/twoColumsLeftTextImage/twoColumnsLeftTextImage";
 // import TwoColumnsTextVideo from "../../base/twoColumsTextVideo/twoColumnsTextVideo";
@@ -77,6 +77,7 @@ const query = `
 const InternaInformation2 = () => {
   const [page, setPage] = React.useState(null);
   const location = useLocation();
+  const [keyCountry, setKeyCountry] = React.useState(null);
 
   useEffect(() => {
     // console.log(location.pathname);
@@ -84,6 +85,7 @@ const InternaInformation2 = () => {
     const url = String(location.pathname).split("/");
     const slug = url[2];
     console.log("slug", slug);
+    setKeyCountry(url[1]);
 
     window
       .fetch(`https://graphql.contentful.com/content/v1/spaces/5btn2y9mgkqy/`, {
@@ -111,7 +113,9 @@ const InternaInformation2 = () => {
               " current data",
               data.internaInformacion2Collection.items[index]
             );
-            setPage(data.internaInformacion2Collection.items[index]);
+            setTimeout(function() {
+              setPage(data.internaInformacion2Collection.items[index]);
+            }, 500)
           }
         });
 
@@ -191,6 +195,11 @@ const InternaInformation2 = () => {
       </section>
       
       <Footer data={page.footer}/>
+      <div className=" p-1 container-fluid  tyc-container d-flex justify-content-center">
+          <Link to={"/legales?id=homePageCollection&slug=home-"+keyCountry}>
+            Términos y Condiciones
+          </Link>
+      </div>
     </div>
   );
 };
