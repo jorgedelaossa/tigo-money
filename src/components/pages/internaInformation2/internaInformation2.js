@@ -131,7 +131,7 @@ const InternaInformation2 = () => {
   return (
     <div className="container-fluid main-container">
       <div className="top-menu"></div>
-      <Helmet>
+      <Helmet htmlAttributes={{ lang : page.seoMetadata.hreflang }}>
         <meta charSet="utf-8" />
         <title>{page.pageTitle}</title>
         <meta name="description" content={page.seoMetadata.description}></meta>

@@ -113,7 +113,7 @@ const InternaPackages = () => {
 
   return (
     <div className="container-fluid main-container">
-      <Helmet>
+      <Helmet htmlAttributes={{ lang : page.seoMetadata.hreflang }}>
         <meta charSet="utf-8" />
         <title>{page.pageTitle}</title>
         <meta name="description" content={page.seoMetadata.description}></meta>
