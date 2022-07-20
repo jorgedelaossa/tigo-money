@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./internaInformation.css";
 import { Helmet } from "react-helmet";
+import TopMenu from "../../base/topMenu/topMenu";
 import Loading from "../../base/loading/loading";
 import Header from "../../base/header/header";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -18,6 +19,7 @@ const query = `
         internalName
         pageTitle
         slug
+        urlAccount
         seoMetadata{
             description
             hreflang
@@ -129,7 +131,7 @@ const InternaInformation = () => {
 
   return (
     <div className="container-fluid main-container">
-      <div className="top-menu"></div>
+      <TopMenu urlAccount={page.urlAccount} />
       <Helmet htmlAttributes={{ lang : page.seoMetadata.hreflang }}>
         <meta charSet="utf-8" />
         <title>{page.pageTitle}</title>

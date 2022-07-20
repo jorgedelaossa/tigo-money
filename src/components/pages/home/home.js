@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Helmet } from "react-helmet";
 import Loading from "../../base/loading/loading";
+import TopMenu from "../../base/topMenu/topMenu";
 import Header from "../../base/header/header";
 import Carousel from "../../base/carousel/carousel"
 import Cta from "../../base/cta/cta";
@@ -17,6 +18,7 @@ const query = `
       items{
         pageTitle
         slug
+        urlAccount
         seoMetadata{
             description
             hreflang
@@ -121,7 +123,7 @@ const Home = () => {
 
   return (
     <div className="container-fluid main-container">
-      <div className="top-menu"></div>
+      <TopMenu urlAccount={page.urlAccount} />
       <Helmet htmlAttributes={{ lang : page.seoMetadata.hreflang }}>
         <meta charSet="utf-8" />
         <title>{page.pageTitle}</title>

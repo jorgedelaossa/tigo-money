@@ -7,10 +7,6 @@
     background-color: #00377b;
 }
 
-.top-menu {
-    height: 30px;
-    background-color: #001950;
-}
 
 .services-container {
     min-height: 500px;
@@ -100,5 +96,6 @@
     color: #00377D;
     margin-top: -2.5em;
 }
+
 
 
