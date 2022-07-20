@@ -1,5 +1,6 @@
 import './twoColumnsTextVideo.css'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {renderOptions} from "../../../utils/generals"
 
 const TwoColumnsTextVideo = (props) => {
     return(
@@ -8,7 +9,7 @@ const TwoColumnsTextVideo = (props) => {
                 <div className="row  row-cols-video  col-12">
                     <div className="col-md-6 text-col d-flex align-items-center ">
                         <div>
-                            { documentToReactComponents(props.data.leftText.json)}
+                            { documentToReactComponents(props.data.leftText.json, renderOptions)}
                         </div>
                     </div>
                     <div  className="col-img col-md-6  p-4 d-flex align-items-center" >

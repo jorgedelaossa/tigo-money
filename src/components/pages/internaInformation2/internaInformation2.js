@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Loading from "../../base/loading/loading";
 import Header from "../../base/header/header";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import {renderOptions} from "../../../utils/generals"
 import { Link, useLocation } from "react-router-dom";
 import TwoColumnsTextImage from "../../base/twoColumsTextImage/twoColumnsTextImage";
 import TwoColumnsLeftTextImage from "../../base/twoColumsLeftTextImage/twoColumnsLeftTextImage";
@@ -158,7 +159,7 @@ const InternaInformation2 = () => {
       </section>
       <section>
         <div className="container container-h1 mt-4 pt-4  ">
-          {documentToReactComponents(page.headerOne.json)}
+          {documentToReactComponents(page.headerOne.json, renderOptions)}
         </div>
       </section>
 
@@ -189,7 +190,7 @@ const InternaInformation2 = () => {
       <section>
         <div className="container-fluid faqs-container  pt-4">
             <div className="container faqs-div mt-4 pt-2">
-              {documentToReactComponents(page.faqs.json)}
+              {documentToReactComponents(page.faqs.json, renderOptions)}
             </div>
         </div>
       </section>

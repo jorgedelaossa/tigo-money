@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Loading from "../../base/loading/loading";
 import Header from "../../base/header/header";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import {renderOptions} from "../../../utils/generals"
 import { useLocation, Link } from "react-router-dom";
 import Cta from "../../base/cta/cta";
 import Footer from "../../base/footer/footer";
@@ -140,7 +141,7 @@ const InternaPackages = () => {
       </section>
       <section>
         <div className="container container-h1 mt-4 pt-4  ">
-          {documentToReactComponents(page.headerOne.json)}
+          {documentToReactComponents(page.headerOne.json, renderOptions)}
         </div>
       </section>
       <section>
@@ -157,7 +158,7 @@ const InternaPackages = () => {
       <section>
         <div className="container-fluid faqs-container  pt-4">
           <div className="container faqs-div mt-4 pt-2">
-            {documentToReactComponents(page.faqs.json)}
+            {documentToReactComponents(page.faqs.json, renderOptions)}
           </div>
         </div>
       </section>

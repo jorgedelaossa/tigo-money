@@ -8,6 +8,7 @@ import Cta from "../../base/cta/cta";
 import TwoColumns from "../../base/twoColumns/twoColumns";
 import Footer from "../../base/footer/footer";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {renderOptions} from "../../../utils/generals"
 import { Link, useLocation } from "react-router-dom";
 
 const query = `
@@ -183,7 +184,7 @@ const Home = () => {
       <section>
         <div className="container-fluid faqs-container  pt-4">
             <div className="container faqs-div mt-4 pt-2">
-              {documentToReactComponents(page.faqs.json)}
+              {documentToReactComponents(page.faqs.json, renderOptions)}
             </div>
         </div>
       </section>

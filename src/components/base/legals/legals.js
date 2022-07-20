@@ -2,6 +2,8 @@ import "./legals.css"
 import Header from "../header/header";
 import { Helmet } from "react-helmet";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {renderOptions} from "../../../utils/generals"
+
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Loading from "../../base/loading/loading";
@@ -105,7 +107,7 @@ const Legals = (props) => {
               
               <div className="p2 pt-4 container tyc">
                 <h1>{page.legals.title}</h1> <br />
-                { documentToReactComponents(page.legals.textContent.json)}
+                { documentToReactComponents(page.legals.textContent.json, renderOptions)}
               </div>
               <Footer data={page.footer}/>
             </div>          

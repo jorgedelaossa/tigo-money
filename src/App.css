@@ -23,6 +23,11 @@
   padding: 0;
 }
 
+/* ul {
+  list-style: none;
+  padding: 0;
+} */
+
 .label-country {
   margin-left: 0.5em;
 }

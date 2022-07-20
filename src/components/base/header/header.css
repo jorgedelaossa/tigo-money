@@ -10,7 +10,7 @@
 
 .masthead-image {
     width: auto;
-    height: 50px;
+    height: 45px;
     
 }
 
@@ -32,12 +32,17 @@
     /* border-bottom: 1px solid #00c8ff; */
 }
 
+.item-aref {
+    height: 46px;
+}
+
 .menu-item-active {
     font-family: Roboto,sans-serif;
     width: auto;
     margin-left: 10px;
-    height: 45px;
+    height: 46px;
     /* border-bottom: 4px solid #00c8ff; */
+    font-weight: bold;
     border-bottom: 4px solid #00377D;
 }
 
@@ -62,10 +67,12 @@
 }
 .mobile-item {
     color: #666;
+    width: 200px;
 }
 
 .mobile-item-active {
     color: #00377D;
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {

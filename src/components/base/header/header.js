@@ -58,7 +58,7 @@ const Header = (props) => {
               {/* <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
               </ListItemIcon> */}
-              <ListItemText  className={slug === item.url ? "mobile-item-active" : "mobile-item"}  primary={item.label} />
+              <ListItemText  className={slug === item.url ? "mobile-item-active " : "mobile-item "}  primary={item.label} />
             </ListItemButton>
             </Link>
           </ListItem>
@@ -85,9 +85,9 @@ const Header = (props) => {
       <div className="row masthead ">
         <div className="col-10 col-md-2 no-padding d-flex align-items-center">
           <div className="hamburger-btn">
-            <MenuIcon onClick={toggleDrawer('left', true)} color="primary"  />
+            <MenuIcon sx={{color: "#00377D"}} onClick={toggleDrawer('left', true)} color="primary"  />
           </div>
-          <Link to="/">
+          <Link to={props.menuItems[0].url}>
             <img
               className="masthead-image"
               src={props.logo?.url}
@@ -101,10 +101,13 @@ const Header = (props) => {
             {props.menuItems?.map((item, index) => {
               return (
                 <div key={index} className={slug === item.url ? "menu-item-active" : "menu-item"}>
-                  <Link to={item.url}>{item.label}</Link>
-                  {/* <a href={item.url}>
-                    <span>{item.label}</span>
-                  </a> */}
+                  {/* <Link to={item.url}> */}
+                  <a  href={item.url}> 
+                    <div className="div item-aref">
+                        {item.label}
+                    </div>
+                 </a>
+                 {/* </Link> */}
                 </div>
               );
             })}
