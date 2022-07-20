@@ -119,7 +119,7 @@ const InternaService = () => {
             );
             setTimeout(function(){
               setPage(data.internaServiciosCollection.items[index]);
-            }, 500);
+            }, 400);
           }
         });
 

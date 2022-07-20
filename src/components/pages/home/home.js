@@ -108,7 +108,7 @@ const Home = () => {
           if (element.slug === slug) {
             setTimeout(function(){
             setPage(data.homePageCollection.items[index]);
-            },500)
+            },400)
           }
         });
 

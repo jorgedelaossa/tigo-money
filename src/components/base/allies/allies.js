@@ -3,8 +3,8 @@ import "./allies.css";
 const Allies = (props) => {
   return (
     <div className="container allies-container  p-2 d-flex justify-content-center align-items-center ">
-      <div className="allies col-12  ">
-        <h1>{props.title}</h1>
+      <div className="allies col-12">
+        <p className="h1-class">{props.title}</p>
         <div className="row no-padding d-flex justify-content-center pt-4">
           {props.data?.items.map((allie, index) => {
             return (

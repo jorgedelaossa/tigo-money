@@ -4,7 +4,7 @@ const TwoColumns = (props) => {
   return (
     <div className="container-fluid two-columns-container p-4 d-flex justify-content-center align-items-center">
       <div className="two-columns col-7">
-        <h1> {props.data.title}</h1>
+        <p className="h1-class"> {props.data.title}</p>
         <div className="row mt-2 no-padding pt-2">
           <div className="col-md-6 divider  d-flex justify-content-center">
             <div className="column-container">

@@ -101,7 +101,7 @@ const InternaPackages = () => {
             );
             setTimeout(function() {
              setPage(data.internaPaquetesCollection.items[index]);
-            }, 500)
+            }, 400)
           }
         });
 

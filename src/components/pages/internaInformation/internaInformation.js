@@ -116,7 +116,7 @@ const InternaInformation = () => {
             );
             setTimeout(function() {
               setPage(data.internaInformacionCollection.items[index]);
-            }, 500);
+            }, 400);
           }
         });
 
